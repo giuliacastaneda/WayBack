@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../modulos/tema.js"></script>
+  <script type="module" src="../login/auth.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="procurar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/8ff313da-1dcc-45d6-8163-d9dda5d323f1/favicon-32x32.png?v=1744744460894">
+  <script type="module" src="procurar.js" defer></script>
+  <title>Procurar objetos</title>
+</head>
+<body>
+
+    <!-- Inicio do Menu suspenso -->
+    <header class="header">
+      <a href="../home/"> <img id="logo" src="https://cdn.glitch.global/5896d43e-0f17-4da8-b9ca-506c2e29e326/logo-bg?v=1745273687181" alt="Logo Wayback" ></a>
+      <a id="icon-bars" onclick="if (document.querySelector('.menu').classList.contains('ativado')) 
+                                          {document.querySelector('.menu').classList.add('desativado'); document.querySelector('.menu').classList.remove('ativado'); setTimeout(() => {document.querySelector('.menu').classList.remove('desativado'); document.body.style.overflow = ''}, 350);}
+                                          else {document.body.style.overflow = 'hidden';document.querySelector('.menu').classList.remove('desativado'); document.querySelector('.menu').classList.add('ativado');};
+                                          document.querySelector('.fa-bars').classList.toggle('fa-xmark');"><i class="fa-solid fa-bars"></i></a>
+      <div class="menu">
+        <nav class="opcoes">
+            <a href="../procurar/" class="fa fa-search" aria-hidden="true">&nbsp;&nbsp;PROCURAR</a>  
+            <a href="../publicar/" class="fa fa-paper-plane" aria-hidden="true">&nbsp;&nbsp;PUBLICAR</a>
+            <a href="../perfil/" class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;PERFIL</a>
+        </nav>
+        <script>
+            const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+            const btn_login = document.createElement("a");
+            btn_login.id = "btn_login";
+            btn_login.innerHTML = (usuario) ?
+            "<i class='fa-solid fa-arrow-right-from-bracket'>&nbsp;&nbsp;LOGOUT</i>" 
+            : "<i class='fa-solid fa-lock'>&nbsp;&nbsp;LOGIN</i>";
+            document.querySelector(".menu").appendChild(btn_login);
+        </script>
+        <i class="fa-solid fa-moon" title="Modo Escuro ou Claro" id="alternar-tema"></i>
+      </div>
+    </header>
+    <!-- Fim do Menu suspenso -->
+
+  <main>
+      <form id="formulario" method="get">
+        <h2 id="titulo-formulario">Filtragem de Objetos</h2>
+        <input type="text" name="titulo" id="item" placeholder="O que procura?">
+        <input type="text" name="local" id="local" placeholder="Em qual cidade perdeu?">
+        <select id="selecaoClasse" name="classe">
+          <option disabled selected>Selecione uma classe</option>
+        </select>
+        <select id="selecaoTipo" name="tipo">
+          <option disabled selected>Selecione um tipo</option>
+        </select>
+        <input type="date" name="data" id="data">
+        <div class="radio-toggle-group">
+          <input type="radio" name="tipoDePesquisa" id="exata" value="true" checked>
+          <label for="exata">
+            <i class="fas fa-bullseye"></i>
+            <span>Pesquisa Exata</span>
+          </label>
+
+          <input type="radio" name="tipoDePesquisa" id="aproximada" value="false">
+          <label for="aproximada">
+            <i class="fas fa-search"></i>
+            <span>Pesquisa Aproximada</span>
+          </label>
+        </div>
+
+
+        <div class="meus_btns">
+          <button type="reset" id="limparDados"><i class="fas fa-trash"></i></button>
+          <button id="btnPesquisar" type="submit">Pesquisar</button>
+          
+        </div>
+      </form>
+  </main>
+
+  <h2 id="tituloObjetoPostados"></h2>
+  <section id="postagens">
+  <!-- Aqui vão ficar os itens perdidos de acordo com o filtro (Usando Java Script)-->
+  </section>
+
+
+  <!-- RODAPÉ -->
+  <footer id="final-da-pagina"> 
+      <nav>
+          <ul>
+              <li><a href="#"><b>Instagram</b></a></li>
+            <li><a href="#"><b>Facebook</b></a></li>
+          </ul>
+      </nav>
+          <p class="rodape-direitos"><b>Copyright © 2025 – Todos os Direitos Reservados.</b></p>
+  </footer>
+ 
+
+</body>
+</html>

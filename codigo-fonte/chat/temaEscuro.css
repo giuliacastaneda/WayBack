@@ -1,0 +1,17 @@
+:root {
+    --cor-primaria-azul: #1a4255; 
+    --cor-primaria-amarelo: #ffd700;
+    --cor-da-sombra: rgba(0, 0, 0, 0.5); 
+    --cor-branca: #e0e0e0; 
+    --cor-preto: #ffffff; 
+    --cor-amarelo-gradiente: linear-gradient(45deg, #fffbd5, #ffe680, #f4b400, #ff7e00); 
+    --cor-cinza-transparente: rgba(255, 255, 255, 0.15); 
+    --cor-cinza-puro: #2a2a2a; 
+    --cor-amarelo-claro: #fff3b0; 
+    --cor-amarelo-escuro: #cc9a00; 
+    --cor-azul-claro: #8fbcd4; 
+    --cor-cinza-azul: #37566b; 
+    --cor-fundo-principal: #0d0d1a;
+    --cor-azul-escuro: #0056b3;
+    --cor-ciano: #38c6c6;
+}
