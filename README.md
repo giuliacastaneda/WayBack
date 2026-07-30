@@ -1,6 +1,6 @@
 # WayBack
 
-- Projeto em refatoração.
+- Projeto em refatoração, <a href="https://giuliacastaneda.github.io/WayBack/src/pages/index.html" target=blank> acesse por aqui.<a>
 
 `Desenvolvimento de aplicação web front-end`
 
@@ -34,9 +34,6 @@ O objetivo geral deste projeto é desenvolver uma aplicação web que centralize
 <li><a href="documentos/09-Referências.md"> Referências Bibliográficas</a></li>
 </ol>
 
-# Hospedagem
-
-*  <a href="">Site da aplicação</a>
 
 # Apresentação
 
