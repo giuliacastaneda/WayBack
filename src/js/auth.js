@@ -1,10 +1,16 @@
 import {ModalErro} from "../js/manipularFetch.js";
 const Modal = new ModalErro();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
-  const btnLogin = document.getElementById("btn_login");
-  btnLogin.style.cursor = "pointer";
+
+ 
+  const usuario = JSON.parse(localStorage.getItem("usuarioLogado")); 
+  const btnLogin = document.getElementById("btn_login"); 
+
+
+if (btnLogin) {
+    btnlogin.innerHTML = (usuario) ?
+            "<i class='fa-solid fa-arrow-right-from-bracket'>&nbsp;&nbsp;LOGOUT</i>" 
+            : "<i class='fa-solid fa-lock'>&nbsp;&nbsp;LOGIN</i>";}
 
   // inserção de div para alerta de erro
   
@@ -180,15 +186,16 @@ document.addEventListener("DOMContentLoaded", () => {
         Modal.abriModal("Você precisa entrar ou cadastrar usuário para acessar esta página!", "ok", sair);
     }
   }
-  
+  /*
   btnLogin.addEventListener("click", () => {
-    if (usuario) {Modal.abriModal("Você tem certeza que deseja sair?", "decisao", sair)} else {window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/src/login/"}
+    if (usuario) {Modal.abriModal("Você tem certeza que deseja sair?", "decisao", sair)} 
+    else {window.location.href = "../pages/login.html"}
   });
-  
-});
+  */
 
 function sair() {
   localStorage.clear();
   window.location.href = "../pages/index.html";
 
 }
+

@@ -108,11 +108,11 @@ button {
 }
 
 .cancelar:hover {
-  background-color: #ccc;
+ transform: scale(1.05);
 }
 
 .publicar:hover {
-  background-color: #00a5c7;
+  transform: scale(1.05);
 }
 
 /*RODAPÉ */

@@ -79,7 +79,7 @@
   }
    
   button {
-    background-color: var(--cor-botoes);
+    background-color: var(--cor-primaria-amarelo);
     color: var(--cor-letra-botoes);
     padding: 10px;
     border-radius: 8px;
@@ -88,11 +88,11 @@
     width: 100%;
     margin-top: 10px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
   }
   
   button:hover {
-    background-color: #00b3b3;
+    transform: scale(1.05);
   }
  
  .card-buttons {
@@ -147,20 +147,24 @@
 .modalSenha {
   display: none; 
   position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  width: 40%;
+  max-width: 600px;
+  height: auto;
   overflow: auto;
-  background-color: var(--cor-fundo-modal); 
-  margin-top:45px;
+  background-color: var(--cor-primaria-azul); 
+  border-radius: 15px;
+  
+
 }
 
 .modalSenha .modal-content {
-  background-color: var(--cor-publicacoes);
-  margin: 10% auto;
-  padding: 20px;
+  background-color: var(--cor-bege);
+  margin: 2% auto;
+  padding: 30px;
   border-radius: 10px;
   width: 300px;
   position: relative;
@@ -173,7 +177,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--cor-fundo-modal);
+    background-color: var(--cor-branca);
    }
 
 .modalEditar {
