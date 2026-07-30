@@ -1,12 +1,12 @@
 # WayBack
 
-`Análise e Desenvolvimento de Sistemas - PUC Minas`
+- Projeto em refatoração.
 
 `Desenvolvimento de aplicação web front-end`
 
-`1º semestre/2025`
+Projeto desenvolvido no 1º semestre/2025 no curso Análise e Desenvolvimento de Sistemas - PUC Minas.
 
-O objetivo geral deste projeto é desenvolver uma aplicação web que centralize o registro de achados e perdidos, facilitando a comunicação entre a pessoa que encontra algum objeto (*Finder*) e a pessoa que perde o mesmo (*Seeker*). 
+O objetivo geral deste projeto é desenvolver uma aplicação web que centralize o registro de achados e perdidos, facilitando a comunicação entre a pessoa que encontra algum objeto e a pessoa que o perde. 
 
 ## Integrantes
 
@@ -36,11 +36,7 @@ O objetivo geral deste projeto é desenvolver uma aplicação web que centralize
 
 # Hospedagem
 
-*  <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/home/">Site da aplicação</a>
-
-# Código-Fonte
-
-* <a href="codigo-fonte/README.md">Código Fonte</a>
+*  <a href="">Site da aplicação</a>
 
 # Apresentação
 

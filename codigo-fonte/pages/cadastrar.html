@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | Wayback</title>
+  <script src="../modulos/tema.js"></script>
+  <script type="module" src="../login/auth.js"></script>
+  <script type="module" src="cadastrar.js" defer></script>
+  <script type="module" src="validarsenha1.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+    <header>
+   <div id="header-container"></div>
+    </header>
+
+  <main>
+    <h1>CADASTRO</h1>
+    <form>
+      <div>
+        <label for="nome">Nome</label><br />
+        <input type="text" id="nome" name="nome" required />
+      </div>
+      <div>
+        <label for="email">E-mail</label><br />
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="usuario">Nome de Usuário</label><br />
+        <input type="text" id="usuario" name="usuario" required />
+      </div>
+      <div>
+        <label for="senha">Senha</label><br />
+        <input type="password" id="senha" name="senha" required />
+      </div>
+      <div>
+        <label for="confirmar">Confirmar Senha</label><br />
+        <input type="password" id="confirmar" name="confirmar" required />
+      </div>
+      <button type="submit" class="btn-cadastrar">Cadastre-se</button>
+    </form>
+
+    <hr />
+
+    <div class="login-link">
+      Já possui cadastro?
+      <a href="../login/">Realizar Login</a>
+    </div>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </nav>
+    <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+  </footer>
+   <script>
+    fetch('../header/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+    });
+</script>
+</body>
+</html>

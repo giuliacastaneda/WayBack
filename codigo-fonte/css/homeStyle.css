@@ -48,7 +48,7 @@ section{padding: 2em 9%;
     font-size: 2em;
     color: var(--cor-branca);
     padding: 1em;
-    margin: 2em 0;
+    margin: 1em 0;
     background-color: white;
 }
 
@@ -95,13 +95,13 @@ section{padding: 2em 9%;
 }
 
 .sobre .row .content_sobre h3{
-  font-size:3rem;
+  font-size:2rem;
   color: var(--cor-branca);
   justify-content:center;
 }
 
 .sobre .row .content_sobre p{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--cor-branca);
   padding: 0.5rem 0;
   padding-top: 1rem;
@@ -113,7 +113,7 @@ section{padding: 2em 9%;
   background-color: #fff;
   border-radius: 12px;
   padding: 1em;
-  color: black;
+  color: #381f1a;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -123,6 +123,11 @@ section{padding: 2em 9%;
 
 .btn:hover{
     background: #c29c41;
+}
+
+h1{
+  text-align: center;
+  color: #381f1a;
 }
 
 
