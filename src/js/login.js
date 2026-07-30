@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (usuarioEncontrado) {
         alert("Login bem-sucedido! 🚀");
         localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
-        window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/perfil/";
+        window.location.href = "../pages/perfil.html";
       } else {
         alert("E-mail ou senha inválidos. 😕");
       }

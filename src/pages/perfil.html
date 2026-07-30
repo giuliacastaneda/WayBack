@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../modulos/tema.js"></script>
+    <script src="../js/tema.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="perfil.css">
-    <script type="module" src="perfilItens.js"></script>
-    <script type="module" src="perfil.js"></script>
-    <script type="module" src="../login/auth.js"></script>
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/tema.css" />
+    <script type="module" src="../js/perfilItens.js"></script>
+    <script type="module" src="../js/perfil.js"></script>
+    <script type="module" src="../js/auth.js"></script>
     <title>Perfil | Wayback</title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/8ff313da-1dcc-45d6-8163-d9dda5d323f1/favicon-32x32.png?v=1744744460894">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
@@ -20,8 +21,8 @@
     <main>  
       <section class="perfil">
         <div><h1>PERFIL</h1></div>
-          <form action="perfil.html" method="POST" class="form-perfil">    
-          <img src="https://cdn.glitch.global/5896d43e-0f17-4da8-b9ca-506c2e29e326/logo.jpg?v=1745269678975" 
+          <form action="../pages/perfil.html" method="POST" class="form-perfil">    
+          <img src="../assets/img/thumbnails_img-logo.png" 
           alt="Foto de Perfil" id="fotoPerfil" class="picture-perfil" tittle="Alterar foto de perfil">
                                   
           <div class="perfil-campos">
@@ -113,7 +114,7 @@
          <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p></h4>
     </footer>
 <script>
-    fetch('../header/header.html')
+    fetch('../components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header-container').innerHTML = data;

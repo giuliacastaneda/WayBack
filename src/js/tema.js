@@ -1,4 +1,12 @@
 // Define e aplica o tema ao carregar a página
+const botao = document.getElementById("alternar-tema");
+
+botao.addEventListener("click", function() {
+  document.body.classList.toggle("dark");
+});
+
+
+/*
 if (!localStorage.getItem("tema")) {
     localStorage.setItem("tema", "claro");
 }
@@ -33,9 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Alterna ícones
         botaoTema.classList.toggle("fa-moon");
         botaoTema.classList.toggle("fa-sun");
+        
 
         // Atualiza o CSS do tema
         const link = document.getElementById("tema-css");
         link.setAttribute("href", novoTema === "claro" ? "temaClaro.css" : "temaEscuro.css");
     });
-});
+});*/

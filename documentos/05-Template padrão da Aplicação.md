@@ -103,5 +103,3 @@ Todas as páginas seguirão um padrão visual, incorporando elementos fixos como
 
 </div>
 
-
-O código responsável pela criação dos elementos mencionados, bem como sua adaptação responsiva, pode ser acessado neste <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-1-e1-proj-web-t4-way-back/tree/main/codigo-fonte">link</a>. As imagens e ícones utilizados no projeto estão disponíveis neste outro <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-1-e1-proj-web-t4-way-back/tree/main/documentos/img">link</a>.

@@ -3,44 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../modulos/tema.js"></script>
-    <script type="module" src="../login/auth.js"></script>
-    <link rel="stylesheet" href="objetoMobileStyle.css" media="(max-width: 800px)">
-    <link rel="stylesheet" href="objetoDesktopStyle.css" media="(min-width: 801px)">
+    <script src="../js/tema.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <link rel="stylesheet" href="../css/objetoMobileStyle.css" media="(max-width: 800px)">
+    <link rel="stylesheet" href="../css/objetoDesktopStyle.css" media="(min-width: 801px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
-    <script type="module" src="objetoScript.js" defer></script>
+    <script type="module" src="../js/objetoScript.js" defer></script>
+    <link rel="stylesheet" href="../css/tema.css" />
     <title>Objeto</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/8ff313da-1dcc-45d6-8163-d9dda5d323f1/favicon-32x32.png?v=1744744460894">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
 </head>
 <body>
-  
-    <!-- Inicio do Menu suspenso -->
-    <header class="header">
-      <a href="../home/"> <img id="logo" src="https://cdn.glitch.global/5896d43e-0f17-4da8-b9ca-506c2e29e326/logo-bg?v=1745273687181" alt="Logo Wayback" ></a>
-      <a id="icon-bars" onclick="if (document.querySelector('.menu').classList.contains('ativado')) 
-                                          {document.querySelector('.menu').classList.add('desativado'); document.querySelector('.menu').classList.remove('ativado'); setTimeout(() => {document.querySelector('.menu').classList.remove('desativado'); document.body.style.overflow = ''}, 350);}
-                                          else {document.body.style.overflow = 'hidden';document.querySelector('.menu').classList.remove('desativado'); document.querySelector('.menu').classList.add('ativado');};
-                                          document.querySelector('.fa-bars').classList.toggle('fa-xmark');"><i class="fa-solid fa-bars"></i></a>
-      <div class="menu">
-        <nav class="opcoes">
-            <a href="../procurar/" class="fa fa-search" aria-hidden="true">&nbsp;&nbsp;PROCURAR</a>  
-            <a href="../publicar/" class="fa fa-paper-plane" aria-hidden="true">&nbsp;&nbsp;PUBLICAR</a>
-            <a href="../perfil/" class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;PERFIL</a>
-        </nav>
-        <script>
-            const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
-            const btn_login = document.createElement("a");
-            btn_login.id = "btn_login";
-            btn_login.innerHTML = (usuario) ?
-            "<i class='fa-solid fa-arrow-right-from-bracket'>&nbsp;&nbsp;LOGOUT</i>" 
-            : "<i class='fa-solid fa-lock'>&nbsp;&nbsp;LOGIN</i>";
-            document.querySelector(".menu").appendChild(btn_login);
-        </script>
-        <i class="fa-solid fa-moon" title="Modo Escuro ou Claro" id="alternar-tema"></i>
-      </div>
+  <header>
+   <div id="header-container"></div>
     </header>
-    <!-- Fim do Menu suspenso -->
   
     <article class="dados-gerais">
         <h2 id="titulo"></h2>
@@ -99,5 +76,12 @@
         </nav>
          <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p></h4>
     </footer>
+    <script>
+    fetch('../components/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+    });
+</script>
 </body>
 </html>

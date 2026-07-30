@@ -1,4 +1,4 @@
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         alert("Usuário cadastrado com sucesso!");
         localStorage.setItem("usuarioLogado", JSON.stringify(data));
-        window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/login/"; //Redirecionando o usuário para a tela de login após o cadastro bem sucedido
+        window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/src/login/"; //Redirecionando o usuário para a tela de login após o cadastro bem sucedido
         form.reset(); // limpa o formulário
       } else {
         alert("Erro ao cadastrar. Tente novamente.");

@@ -1,6 +1,6 @@
 // Importando a classe ItensAPI e ModalErro
-import {ItensAPI} from "../modulos/manipularFetch.js";
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ItensAPI} from "../js/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 const Modal = new ModalErro();
 
 // Pegar o valor id repassado na queryString  
@@ -45,7 +45,7 @@ async function buscar() {
         field_data.textContent = resposta_data;  
         field_descricao.textContent = resposta_descricao;  
     } else {  
-        //window.location.href = '../erro/';
+        //window.location.href = '../pages/erro.html';
     }  
 }  
 
@@ -94,7 +94,7 @@ abrirChat.addEventListener("click", async () => {
     if (objeto.autor === usuarioLogado.usuario) {
         Modal.abriModal("Você, " + usuarioLogado.nome + ", é a própria pessoa que publicou o item. Quer conversar com você mesmo?", "ok");
     } else {
-        window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/chat/index.html?novaConversa=" + (id);
+        window.location.href = "../pages/chat.html?novaConversa=" + (id);
     }
   
 });

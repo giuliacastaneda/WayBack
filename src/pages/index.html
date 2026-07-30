@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../modulos/tema.js"></script>
-    <script type="module" src="../login/auth.js"></script>
+    <script src="../js/tema.js"></script>
+    <script type="module" src="../js/auth.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="../css/homeStyle.css">
+    <link rel="stylesheet" href="../css/tema.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=National+Park:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
@@ -43,7 +44,7 @@
                 prática e acessível, é possível registrar objetos perdidos ou encontrados e facilitar o retorno desses itens aos seus proprietários.</p>
             <p>Aqui você tem um espaço seguro e eficiente para fazer a diferença.</p>
         
-            <a href="../cadastrar/index.html" class="btn">Cadastre-se</a>
+            <a href="../pages/cadastrar.html" class="btn">Cadastre-se</a>
         </div>
 
     </section>
@@ -86,7 +87,7 @@
         <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
 </footer>
  <script>
-        fetch('../header/header.html')
+        fetch('../components/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-container').innerHTML = data;

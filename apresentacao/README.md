@@ -14,4 +14,4 @@ https://github.com/user-attachments/assets/16edd406-cbb3-4756-9547-56b4aed8fc21
 
 ## Hospedagem
 
-* <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/home/">Site da aplicação</a>
+* <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/src/home/">Site da aplicação</a>

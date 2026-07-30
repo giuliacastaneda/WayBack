@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="../modulos/tema.js"></script>
+  <script src="../js/tema.js"></script>
   <title>Login | Wayback</title>
-  <script type="module" src="validarSenha.js"></script>
-  <script type="module" src="../login/auth.js"></script>
-  <script src="login.js"></script>
+  <script type="module" src="../js/validarSenha.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/8ff313da-1dcc-45d6-8163-d9dda5d323f1/favicon-32x32.png?v=1744744460894">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/tema.css" />
   
 </head>
 <body>
@@ -35,7 +36,7 @@
 
     <hr />
 <div class="links" style="justify-content: center;">
-  <a href="../cadastrar/">Cadastre-se</a>
+  <a href="../pages/cadastrar.html">Cadastre-se</a>
 </div>
   </main>
 
@@ -49,7 +50,7 @@
     <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
   </footer>
 <script>
-    fetch('../header/header.html')
+    fetch('../components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header-container').innerHTML = data;

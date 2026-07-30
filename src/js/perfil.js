@@ -1,4 +1,4 @@
-import {UsuariosAPI} from "../modulos/manipularFetch.js";
+import {UsuariosAPI} from "../js/manipularFetch.js";
 
 //alterar dados de cadastro
 document.addEventListener("DOMContentLoaded", () => {

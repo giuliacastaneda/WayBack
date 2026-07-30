@@ -5,9 +5,9 @@
     <script type="module" src="seu_arquivo_padrão"></script>
 
     Faça isso no inicio do seu arquivo principal.js:
-    import {ItensAPI} from "../modulos/manipularFetch.js";
-    import {ChatAPI} from "../modulos/manipularFetch.js";
-    import {UsuariosAPI} from "../modulos/manipularFetch.js";
+    import {ItensAPI} from "../js/manipularFetch.js";
+    import {ChatAPI} from "../js/manipularFetch.js";
+    import {UsuariosAPI} from "../js/manipularFetch.js";
 
 
     // 1° passo: Obrigatorio instanciar objeto a partir de uma dessas classes (apenas aquela que vc irá usar)

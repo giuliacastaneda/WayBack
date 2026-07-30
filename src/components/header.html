@@ -4,7 +4,7 @@
     </header>
 
 <script>
-    fetch('../header/header.html')
+    fetch('../components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header-container').innerHTML = data;
@@ -14,7 +14,7 @@
 
 
 <header id="header-container" class="header">
-      <a href="../home/"> <img id="logo" src="../assets/img/apple-touch-icon.png" alt="Logo Wayback" ></a>
+      <a href="../pages/index.html"> <img id="logo" src="../assets/img/apple-touch-icon.png" alt="Logo Wayback" ></a>
       <a id="icon-bars" onclick="if (document.querySelector('.menu').classList.contains('ativado')) 
         {document.querySelector('.menu').classList.add('desativado'); document.querySelector('.menu').classList.remove('ativado'); 
         setTimeout(() => {document.querySelector('.menu').classList.remove('desativado'); document.body.style.overflow = ''}, 350);}
@@ -23,9 +23,9 @@
         document.querySelector('.fa-bars').classList.toggle('fa-xmark');"><i class="fa-solid fa-bars"></i></a>
       <div class="menu">
         <nav class="opcoes">
-            <a href="../procurar/" class="fa fa-search" aria-hidden="true">&nbsp;&nbsp;PROCURAR</a>  
-            <a href="../publicar/" class="fa fa-paper-plane" aria-hidden="true">&nbsp;&nbsp;PUBLICAR</a>
-            <a href="../perfil/" class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;PERFIL</a>
+            <a href="../pages/procurar.html" class="fa fa-search" aria-hidden="true">&nbsp;&nbsp;PROCURAR</a>  
+            <a href="../pages/publicar.html" class="fa fa-paper-plane" aria-hidden="true">&nbsp;&nbsp;PUBLICAR</a>
+            <a href="../pages/perfil.html" class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;PERFIL</a>
         </nav>
         <script>
             const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
@@ -246,6 +246,12 @@
 </style>
 
 <script>
+const botao = document.getElementById("alternar-tema");
+
+botao.addEventListener("click", function() {
+  document.body.classList.toggle("dark");
+});
+  /*
   if (!localStorage.getItem("tema")) {
   localStorage.setItem("tema", "claro");
   }
@@ -285,5 +291,5 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.getElementById("tema-css");
         link.setAttribute("href", novoTema === "claro" ? "temaClaro.css" : "temaEscuro.css");
     });
-});
+});*/
 </script>

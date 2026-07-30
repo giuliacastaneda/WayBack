@@ -1,4 +1,4 @@
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 // Espera o carregamento do DOM
 document.addEventListener("DOMContentLoaded", function () {
 

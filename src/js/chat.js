@@ -1,5 +1,5 @@
-import { ChatAPI } from "../modulos/manipularFetch.js";
-import { ItensAPI } from "../modulos/manipularFetch.js";
+import { ChatAPI } from "../js/manipularFetch.js";
+import { ItensAPI } from "../js/manipularFetch.js";
 
 
 const Chat = new ChatAPI();

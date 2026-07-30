@@ -1,5 +1,5 @@
-import {ItensAPI} from "../modulos/manipularFetch.js";
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ItensAPI} from "../js/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 
 const itens = new ItensAPI();
 const lista = document.getElementById("lista");
@@ -30,9 +30,10 @@ async function carregarObjetos() {
         <strong> Data: ${obj.data}</strong><br>
         <p>${obj.descricao}</p>
         <div class="card-buttons">
-          <button onclick="editarItem(${obj.id}, '${obj.titulo}', '${obj.local}', '${obj.tipo}', '${obj.classe}', '${obj.data}', '${obj.descricao}', '${obj.imagem}', '${obj.ativo}')">Editar</button>
+          <button onclick="editarItem(${obj.id}, '${obj.titulo}', '${obj.local}', '${obj.tipo}', '${obj.classe}',
+           '${obj.data}', '${obj.descricao}', '${obj.imagem}', '${obj.ativo}')">Editar</button>
           <button class="btnInativar" data-id="${obj.id}">${inativo ? 'Ativar' : 'Inativar'}</button>
-          <button onclick="window.location.href ='https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/chat/';">Chat</button>
+          <button onclick="window.location.href ='../pages/chat.html';">Chat</button>
         </div>
       `;
       lista.appendChild(div);

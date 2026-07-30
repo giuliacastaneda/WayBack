@@ -1,4 +1,4 @@
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 const Modal = new ModalErro();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -172,23 +172,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     const pegarURL = window.location.href;
-    if (pegarURL === "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/publicar/" ||
-        pegarURL === "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/perfil/" ||
-        pegarURL === "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/itens/" ||
-        pegarURL === "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/procurar/" ||
-        pegarURL === "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/chat/") {
+    if (pegarURL === "../pages/publicar.html" ||
+        pegarURL === "../pages/perfil.html" || 
+        pegarURL === "../pages/itens.html" ||
+        pegarURL === "../pages/procurar.html" ||
+        pegarURL === "../pages/chat.html") {
         Modal.abriModal("Você precisa entrar ou cadastrar usuário para acessar esta página!", "ok", sair);
     }
   }
   
   btnLogin.addEventListener("click", () => {
-    if (usuario) {Modal.abriModal("Você tem certeza que deseja sair?", "decisao", sair)} else {window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/login/"}
+    if (usuario) {Modal.abriModal("Você tem certeza que deseja sair?", "decisao", sair)} else {window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/src/login/"}
   });
   
 });
 
 function sair() {
   localStorage.clear();
-  window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/home/";
+  window.location.href = "../pages/index.html";
 
 }

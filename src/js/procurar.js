@@ -1,5 +1,5 @@
-import {ItensAPI} from "../modulos/manipularFetch.js";
-import {ModalErro} from "../modulos/manipularFetch.js";
+import {ItensAPI} from "../js/manipularFetch.js";
+import {ModalErro} from "../js/manipularFetch.js";
 
 const query = window.location.search;
 document.addEventListener("DOMContentLoaded", async () => {
@@ -60,7 +60,7 @@ function adicionarItens(id, dadosJSON) {
     const minhaDiv = document.createElement("div");
     minhaDiv.className = "painelItem";
     minhaDiv.addEventListener("click", () => {
-        window.location.href = "https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2025-1-e1-proj-web-t4-way-back/codigo-fonte/itens/index.html?id=" + (id+1);
+        window.location.href = "../pages/itens.html?id=" + (id+1);
     });
 
 
